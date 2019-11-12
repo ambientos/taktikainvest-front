@@ -1,0 +1,14 @@
+.screen-reader-text {
+	$size: 1px;
+
+	position: absolute;
+	width: $size;
+	height: $size;
+	margin: -$size;
+	padding: 0;
+	border: 0;
+	clip: rect($size, $size, $size, $size);
+	clip-path: inset(50%);
+	overflow: hidden;
+	word-wrap: normal !important;
+}

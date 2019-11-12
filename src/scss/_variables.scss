@@ -1,0 +1,25 @@
+//
+// Image Directory
+//
+
+$img-dir: '../i/';
+
+
+//
+// Fonts Variables
+//
+
+$font-dir:	 '../fonts/';
+
+$font-main:  'Lato';
+$font-sub:   'Montserrat';
+
+$fonts:	(
+	( $font-main, 'regular',    normal, 400, 20191112 ),
+	( $font-main, 'italic',     italic, 400, 20191112 ),
+	( $font-main, 'medium',     normal, 500, 20191112 ),
+	( $font-main, 'semibold',   normal, 600, 20191112 ),
+	( $font-main, 'bold',       normal, 700, 20191112 ),
+	( $font-sub,  'semibold',   normal, 600, 20191112 ),
+	( $font-sub,  'extrabold',  normal, 800, 20191112 ),
+);

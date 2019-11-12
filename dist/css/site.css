@@ -1,2 +1,63 @@
+.screen-reader-text {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  overflow: hidden;
+  word-wrap: normal !important; }
+
+@font-face {
+  font-family: "Lato";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/Lato/regular.woff2?v=20191112") format("woff2"), url("../fonts/Lato/regular.woff?v=20191112") format("woff"); }
+
+@font-face {
+  font-family: "Lato";
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+  src: url("../fonts/Lato/italic.woff2?v=20191112") format("woff2"), url("../fonts/Lato/italic.woff?v=20191112") format("woff"); }
+
+@font-face {
+  font-family: "Lato";
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/Lato/medium.woff2?v=20191112") format("woff2"), url("../fonts/Lato/medium.woff?v=20191112") format("woff"); }
+
+@font-face {
+  font-family: "Lato";
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/Lato/semibold.woff2?v=20191112") format("woff2"), url("../fonts/Lato/semibold.woff?v=20191112") format("woff"); }
+
+@font-face {
+  font-family: "Lato";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/Lato/bold.woff2?v=20191112") format("woff2"), url("../fonts/Lato/bold.woff?v=20191112") format("woff"); }
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/Montserrat/semibold.woff2?v=20191112") format("woff2"), url("../fonts/Montserrat/semibold.woff?v=20191112") format("woff"); }
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/Montserrat/extrabold.woff2?v=20191112") format("woff2"), url("../fonts/Montserrat/extrabold.woff?v=20191112") format("woff"); }
 
 /*# sourceMappingURL=site.css.map */

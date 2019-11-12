@@ -44,7 +44,14 @@ function browserSync(done) {
 
 // HTML task
 function htmlGenerate() {
-    return gulp.src(files.pug)
+    return gulp
+        .src([path.src, path.pug, '*.pug'].join('/'))
+        .pipe(plumber({
+            errorHandler: notify.onError( err => ({
+                title: 'Pug Builder',
+                message: err.message
+            }))
+        }))
         .pipe(pug({
             pretty: '\t'
         }))
