@@ -4,6 +4,12 @@
 			border-bottom: 2px solid rgba($white, .15);
 		}
 
+		.nav-item {
+			@include media-breakpoint-up('xl') {
+				padding-right: 1.9rem;
+			}
+		}
+
 		li {
 			font-weight: $font-weight-semibold;
 		}

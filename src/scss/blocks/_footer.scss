@@ -1,14 +1,26 @@
 .footer {
-	padding: 6.25rem 0 4.25rem;
 	color: $white;
 	background-color: $gray-900;
+
+	@include media-breakpoint-up('lg') {
+		padding: 6.25rem 0 4.25rem;
+	}
+
+	@include media-breakpoint-between('md', 'md') {
+		padding: 4.5rem 0 3.5rem;
+	}
+
+	@include media-breakpoint-down('sm') {
+		padding: 2.5em 0 1em;
+	}
 
 	&-item {
 		&-title {
 			margin-bottom: .5em;
-			font: {
-				size: 1.125rem;
-				weight: $font-weight-semibold;
+			font-weight: $font-weight-semibold;
+
+			@include media-breakpoint-up('md') {
+				font-size: 1.125rem;
 			}
 		}
 
@@ -18,13 +30,25 @@
 	}
 
 	&-menu {
+		@include media-breakpoint-down('sm') {
+			margin: 2em 0;
+		}
+
 		a {
 			margin-bottom: .3em;
-			padding-top: 0;
+			padding: {
+				left: 0;
+				top: 0;
+				right: 0;
+			}
 		}
 	}
 
 	a {
 		color: inherit;
+
+		&:hover {
+			color: $gray-500;
+		}
 	}
 }

@@ -24,6 +24,14 @@
 		}
 		letter-spacing: .33em;
 
+		@include media-breakpoint-between('sm', 'md') {
+			font-size: .75rem;
+		}
+
+		@include media-breakpoint-down('sm') {
+			font-size: .5rem;
+		}
+
 		&._main {
 			margin-top: .4em;
 			font-size: 1.125rem;
@@ -38,6 +46,19 @@
 		&,
 		&:hover {
 			color: currentColor;
+		}
+	}
+
+	&-thumb {
+		&._home,
+		&._nav {
+			@include media-breakpoint-between('md', 'md') {
+				width: 60px;
+			}
+
+			@include media-breakpoint-down('sm') {
+				width: 32px;
+			}
 		}
 	}
 }

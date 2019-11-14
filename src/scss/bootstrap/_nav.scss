@@ -15,6 +15,10 @@
   display: block;
   padding: $nav-link-padding-y $nav-link-padding-x;
 
+  @include media-breakpoint-down('md') {
+    padding: $nav-link-padding-y * .5 $nav-link-padding-x;
+  }
+
   @include hover-focus {
     text-decoration: none;
   }

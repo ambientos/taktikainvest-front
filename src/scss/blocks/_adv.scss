@@ -1,15 +1,36 @@
 .adv {
 	&-inner {
-		padding: 2.875rem 17%;
 		color: $white;
+
+		@include media-breakpoint-up('lg') {
+			padding: .1em 17%;
+		}
+
+		@include media-breakpoint-down('md') {
+			padding: .1em 10%;
+		}
+
+		@include media-breakpoint-down('sm') {
+			text-align: center;
+		}
+	}
+
+	&-info,
+	&-btn {
+		@include media-breakpoint-up('lg') {
+			margin: 2.875rem 0;
+		}
+
+		@include media-breakpoint-down('md') {
+			margin: 2rem 0;
+		}
 	}
 
 	&-info {
 		&-title {
-			font: {
-				size: 1.375rem;
-				weight: $font-weight-semibold;
-			}
+			font-weight: $font-weight-semibold;
+
+			@include font-size(1.375rem);
 		}
 
 		&-text {

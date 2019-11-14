@@ -1,5 +1,17 @@
 .posts {
+	&-list {
+		border-bottom: 1px solid $border-color;
+	}
+
 	&-item {
+		@include media-breakpoint-up('md') {
+			margin-bottom: 5em;
+		}
+
+		@include media-breakpoint-down('sm') {
+			margin-bottom: 1.875em;
+		}
+
 		&-thumbnail {
 			margin-bottom: 0;
 		}
@@ -9,27 +21,49 @@
 		}
 
 		&-main {
-			min-height: 6em;
-			margin: 2em 0 0;
+			padding-bottom: 1.25em;
 			font-weight: $font-weight-semibold;
-			border-bottom: 1px solid $gray-200;
+			border-bottom: 1px solid $border-color;
+
+			@include media-breakpoint-up('md') {
+				margin-top: 2em;
+			}
+
+			@include media-breakpoint-down('sm') {
+				margin-top: 1.25em;
+			}
+
+			@include media-breakpoint-up('sm') {
+				min-height: 6em;
+			}
 		}
 
 		&-title {
 			display: -webkit-box;
 			max-height: 2.5em;
-			font-size: 1.125rem;
 			text-overflow: ellipsis;
 			color: $gray-900;
 			line-height: 1.2;
 			-webkit-line-clamp: 2;
 			overflow: hidden;
 			-webkit-box-orient: vertical;
+
+			@include media-breakpoint-up('md') {
+				font-size: 1.125rem;
+			}
+
+			@include media-breakpoint-down('sm') {
+				font-size: 1rem;
+			}
 		}
 
 		&-price {
 			margin-top: .5em;
 			color: $secondary;
+
+			@include media-breakpoint-down('sm') {
+				font-size: .875rem;
+			}
 		}
 
 		&-chrs {
@@ -39,6 +73,10 @@
 				margin: .5em 0;
 				font-weight: $font-weight-medium;
 				color: lighten($body-color, 10%);
+
+				@include media-breakpoint-down('sm') {
+					font-size: .875rem;
+				}
 			}
 		}
 	}

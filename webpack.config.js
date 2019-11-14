@@ -7,6 +7,7 @@ module.exports = {
 	mode: 'production',
 	context: __dirname + srcPath,
 	entry: {
+		bootstrap: './bootstrap/index.js',
 		site: './site/index.js'
 	},
 	output: {

@@ -14,16 +14,17 @@ block content
 	.container
 		section.widget
 			h2.widget-title Новинки
-			.row.posts-list
-				- var posts = [{thumb: '2', title: 'Дом 980 кв. м', price: '355 000 000 ₽', chrs: ['Площадь: 980. 00 м<sup>2</sup>', 'Комнат: 9']}, {thumb: '3', title: 'Дом на Рублевском шоссе', price: '250 000 ₽', chrs: ['Площадь: 850.00 м<sup>2</sup>', 'Комнат: 6']}, {thumb: '4', title: 'Таун-хаус в районе Барвиха-Клаб', chrs: ['Площадь: 330.00 м<sup>2</sup>', 'Комнат: 7', 'Город, адрес: ул. Утренняя, 3']}, {thumb: '5', title: 'Продажа коттеджа р-н Ленинский', price: '80 000 000 ₽', chrs: ['Площадь: 1100.00 м<sup>2</sup>', 'Комнат: 2']}];
-				each post in posts
-					.col-lg-3.col-sm-6
-						+postsItem(post)
+			.posts-list
+				.row
+					- var posts = [{thumb: '2', title: 'Дом 980 кв. м', price: '355 000 000 ₽', chrs: ['Площадь: 980. 00 м<sup>2</sup>', 'Комнат: 9']}, {thumb: '3', title: 'Дом на Рублевском шоссе', price: '250 000 ₽', chrs: ['Площадь: 850.00 м<sup>2</sup>', 'Комнат: 6']}, {thumb: '4', title: 'Таун-хаус в районе Барвиха-Клаб', chrs: ['Площадь: 330.00 м<sup>2</sup>', 'Комнат: 7', 'Город, адрес: ул. Утренняя, 3']}, {thumb: '5', title: 'Продажа коттеджа р-н Ленинский', price: '80 000 000 ₽', chrs: ['Площадь: 1100.00 м<sup>2</sup>', 'Комнат: 2']}];
+					each post in posts
+						.col-lg-3.col-sm-6
+							+postsItem(post)
 
 		section.widget._about
 			h2.widget-title О компании
 			.row
-				.col-md-6
+				.col-md-6.d-none.d-md-block
 					+logo(' _main', false, '132', 'Тактика')
 					.row
 						.col-lg-9

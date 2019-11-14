@@ -1,14 +1,31 @@
 .promo {
 	&-container {
-		padding: {
-			top: 290px;
-			bottom: 200px;
-		}
 		color: $white;
 		background: {
 			color: $gray-700;
 			repeat: no-repeat;
 			size: cover;
+		}
+
+		@include media-breakpoint-down('md') {
+			padding: {
+				top: 130px;
+				bottom: 80px;
+			}
+		}
+
+		@include media-breakpoint-between('lg', 'xl') {
+			padding: {
+				top: 230px;
+				bottom: 100px;
+			}
+		}
+
+		@include media-breakpoint-up('xl') {
+			padding: {
+				top: 290px;
+				bottom: 200px;
+			}
 		}
 	}
 
@@ -16,21 +33,23 @@
 		max-width: 700px;
 	}
 
-	&-title {
-		font: {
-			size: 2.5rem;
-			weight: $font-weight-semibold;
-		}
+	&-title,
+	&-subtitle {
 		line-height: 1.2;
+	}
+
+	&-title {
+		font-weight: $font-weight-semibold;
+
+		@include font-size(2.5rem);
 	}
 
 	&-subtitle {
 		margin-top: .8em;
-		font: {
-			size: 1.625rem;
-			weight: $font-weight-medium;
-		}
+		font-weight: $font-weight-medium;
 		opacity: .65;
+
+		@include font-size(1.625rem);
 	}
 
 	&-form {

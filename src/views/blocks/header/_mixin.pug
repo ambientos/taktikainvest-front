@@ -4,15 +4,21 @@ mixin header(type)
 	header(class='header' + _type)
 		.container
 			.row.align-items-center.justify-content-between
-				.col-md
+				.col
 					+logo(_type, true)
 
-				.col-md.d-md-flex.align-items-center.justify-content-end
-					.header-tel
-						a(
-							href='tel:88005708950'
-							class='header-tel-link tel' + _type
-						) 8 800 570 89 50
+				.col.d-none.d-sm-flex.align-items-center.justify-content-end
+					.d-none.d-lg-block
+						include ./_tel.pug
 
-					.header-call
-						span.btn-primary.btn Заказать звонок
+					include ./_call-button.pug
+
+				.navbar-dark.d-flex.d-lg-none.justify-content-end
+					button.navbar-toggler(
+						type='button'
+						data-toggle='collapse'
+						data-target='#navbarSupportedContent'
+						aria-controls='navbarSupportedContent'
+						aria-expanded='false'
+						aria-label='Toggle navigation')
+						span.navbar-toggler-icon

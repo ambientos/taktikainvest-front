@@ -1,5 +1,11 @@
 .widget {
-	margin: 6.25em 0;
+	@include media-breakpoint-up('md') {
+		margin: 6.25em 0;
+	}
+
+	@include media-breakpoint-down('sm') {
+		margin: 2.5em 0;
+	}
 
 	&-title {
 		&::after {

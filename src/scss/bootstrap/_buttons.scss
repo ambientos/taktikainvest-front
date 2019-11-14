@@ -21,6 +21,13 @@
   @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
   @include transition($btn-transition);
 
+  @include media-breakpoint-down('lg') {
+    font: {
+      size: .625rem;
+      weight: $font-weight-bold;
+    }
+  }
+
   @include hover {
     color: $body-color;
     text-decoration: none;

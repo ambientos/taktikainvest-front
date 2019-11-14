@@ -3,7 +3,10 @@
 
 	&._home {
 		position: relative;
-		border-bottom: 2px solid rgba($white, .15);
+
+		@include media-breakpoint-up('lg') {
+			border-bottom: 2px solid rgba($white, .15);
+		}
 	}
 
 	&-home {
@@ -19,14 +22,21 @@
 	}
 
 	&-tel {
+		font: {
+			family: $font-sub;
+			size: 1.125rem;
+			weight: $font-weight-semibold;
+		}
+		letter-spacing: .1em;
+
+		@include media-breakpoint-down('md') {
+			font-size: 1rem;
+			letter-spacing: 0;
+			color: $gray-900;
+		}
+
 		&-link {
 			margin-right: 1em;
-			font: {
-				family: $font-sub;
-				size: 1.125rem;
-				weight: $font-weight-semibold;
-			}
-			letter-spacing: .1em;
 
 			&,
 			&:hover {
