@@ -1,0 +1,38 @@
+.advantage {
+	&-item {
+		&::before {
+			$size: 35px;
+
+			display: block;
+			width: $size;
+			height: $size;
+			margin-bottom: 1.5em;
+			content: '';
+			background: {
+				repeat: no-repeat;
+				size: contain;
+			}
+		}
+
+		@each $ico in $advantage-icons {
+			&._#{$ico} {
+				&::before {
+					background-image: url('#{$img-dir}#{$ico}.svg');
+				}
+			}
+		}
+
+		&-title {
+			font: {
+				size: 1.125rem;
+				weight: $font-weight-semibold;
+			}
+			line-height: 1.2;
+			color: $gray-900;
+		}
+
+		&-info {
+			margin-top: 1em;
+		}
+	}
+}

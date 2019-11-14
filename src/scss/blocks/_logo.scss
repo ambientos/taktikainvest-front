@@ -1,0 +1,43 @@
+.logo {
+	display: inline-block;
+	margin-bottom: 0;
+	vertical-align: top;
+	color: $gray-900;
+
+	&._home {
+		color: inherit;
+	}
+
+	&._main {
+		margin-bottom: 1.5em;
+	}
+
+	&-title {
+		display: block;
+		font: {
+			family: $font-sub;
+			weight: $font-weight-extrabold;
+		}
+		text: {
+			align: center;
+			transform: uppercase;
+		}
+		letter-spacing: .33em;
+
+		&._main {
+			margin-top: .4em;
+			font-size: 1.125rem;
+		}
+
+		.d-flex > & {
+			margin-left: 2em;
+		}
+	}
+
+	&-link {
+		&,
+		&:hover {
+			color: currentColor;
+		}
+	}
+}

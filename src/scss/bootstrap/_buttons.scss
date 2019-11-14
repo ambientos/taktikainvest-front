@@ -9,9 +9,13 @@
   font-family: $btn-font-family;
   font-weight: $btn-font-weight;
   color: $body-color;
-  text-align: center;
+  text: {
+    align: center;
+    transform: uppercase;
+  }
   vertical-align: middle;
   user-select: none;
+  cursor: pointer;
   background-color: transparent;
   border: $btn-border-width solid transparent;
   @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
@@ -64,7 +68,7 @@ fieldset:disabled a.btn {
 
 @each $color, $value in $theme-colors {
   .btn-outline-#{$color} {
-    @include button-outline-variant($value);
+    //@include button-outline-variant($value);
   }
 }
 
@@ -133,5 +137,22 @@ input[type="reset"],
 input[type="button"] {
   &.btn-block {
     width: 100%;
+  }
+}
+
+
+//
+// Button with icons
+//
+
+.btn-ico {
+  display: flex;
+  min-width: 1.625em;
+  justify-content: center;
+  align-items: center;
+
+  .ico {
+    display: inline-block;
+    vertical-align: top;
   }
 }

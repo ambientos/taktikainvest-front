@@ -1,0 +1,13 @@
+.widget {
+	margin: 6.25em 0;
+
+	&-title {
+		&::after {
+			display: block;
+			margin: .7em 0 1.8em;
+			width: 2.5rem;
+			content: '';
+			border-top: 3px solid $secondary;
+		}
+	}
+}

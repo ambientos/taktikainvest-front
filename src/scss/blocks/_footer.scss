@@ -1,0 +1,30 @@
+.footer {
+	padding: 6.25rem 0 4.25rem;
+	color: $white;
+	background-color: $gray-900;
+
+	&-item {
+		&-title {
+			margin-bottom: .5em;
+			font: {
+				size: 1.125rem;
+				weight: $font-weight-semibold;
+			}
+		}
+
+		&-content {
+			color: $gray-600;
+		}
+	}
+
+	&-menu {
+		a {
+			margin-bottom: .3em;
+			padding-top: 0;
+		}
+	}
+
+	a {
+		color: inherit;
+	}
+}

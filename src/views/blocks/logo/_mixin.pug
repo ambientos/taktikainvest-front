@@ -1,0 +1,19 @@
+mixin logo(postfixClass, horizontal, size, title)
+	- var _class = postfixClass ? postfixClass : false;
+	- var _horizontal = horizontal ? horizontal : false;
+	- var _size = size ? size : '85';
+	- var _title = title ? title : 'Тактика Инвест';
+
+	figure(class='logo' + (_class ? ' ' + _class : ''))
+		a(
+			href='/'
+			class='logo-link' + (_horizontal ? ' d-flex align-items-center' : '') + (_class ? ' ' + _class : '')
+		)
+			img(
+				class=('logo-thumb' + (_class ? ' ' + _class : ''))
+				src='i/logo-'+ ( _class == ' _home' ? 'white' : 'dark' ) +'.svg'
+				width=_size
+				alt=_title
+			)
+
+			span(class='logo-title' + (_class ? ' ' + _class : ''))= _title

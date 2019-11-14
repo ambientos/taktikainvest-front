@@ -1,3 +1,6 @@
-script(src='js/jquery-1.12.4.min.js?v=20191112')
-script(src='js/site.build.js?v=20191112')
+- var scripts = [{file: 'js/jquery-1.12.4.min.js', version: '20191112'}, {file: 'js/site.build.js', version: '20191112'}];
+
+each scriptItem in scripts
+	script(src=scriptItem.file + '?v=' + scriptItem.version)
+
 block scripts

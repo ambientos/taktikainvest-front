@@ -1,0 +1,17 @@
+section.promo-container(style='background-image:url(t/1.jpg)')
+	.container
+		.promo-inner
+			.promo-title Наша экспертиза в коммерческой недвижимости
+			.promo-subtitle Ваши сэкономленные деньги и время
+			form.promo-form
+				.input-group
+					select.custom-select-lg.custom-select
+						option Арендный бизнес
+						option Продажа
+					input.form-control-lg.form-control(type='text', placeholder='Метро')
+					select.custom-select-lg.custom-select
+						option Стоимость
+					.input-group-append
+						button.btn-outline-secondary.btn-primary.btn-lg.btn(type='button')
+							span.btn-ico
+								include ./i/search.svg

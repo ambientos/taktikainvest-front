@@ -52,6 +52,14 @@ body {
   color: $body-color;
   text-align: left; // 3
   background-color: $body-bg; // 2
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @include media-breakpoint-down("sm") {
+    overflow-wrap: break-word;
+  }
 }
 
 // Suppress the focus outline on elements that cannot be accessed via keyboard.
@@ -183,6 +191,8 @@ a {
   color: $link-color;
   text-decoration: $link-decoration;
   background-color: transparent; // Remove the gray background on active links in IE 10.
+
+  @include transition;
 
   @include hover {
     color: $link-hover-color;

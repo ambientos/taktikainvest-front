@@ -1,6 +1,55 @@
-extends ./layout/layout.pug
+extends ./layout/skeleton.pug
 
 block meta
 	title Главная
 
+block top
+	.header-home
+		+header('home')
+		+nav('home')
+
+	include ./blocks/promo/_base.pug
+
 block content
+	.container
+		section.widget
+			h2.widget-title Новинки
+			.row.posts-list
+				- var posts = [{thumb: '2', title: 'Дом 980 кв. м', price: '355 000 000 ₽', chrs: ['Площадь: 980. 00 м<sup>2</sup>', 'Комнат: 9']}, {thumb: '3', title: 'Дом на Рублевском шоссе', price: '250 000 ₽', chrs: ['Площадь: 850.00 м<sup>2</sup>', 'Комнат: 6']}, {thumb: '4', title: 'Таун-хаус в районе Барвиха-Клаб', chrs: ['Площадь: 330.00 м<sup>2</sup>', 'Комнат: 7', 'Город, адрес: ул. Утренняя, 3']}, {thumb: '5', title: 'Продажа коттеджа р-н Ленинский', price: '80 000 000 ₽', chrs: ['Площадь: 1100.00 м<sup>2</sup>', 'Комнат: 2']}];
+				each post in posts
+					.col-lg-3.col-sm-6
+						+postsItem(post)
+
+		section.widget._about
+			h2.widget-title О компании
+			.row
+				.col-md-6
+					+logo(' _main', false, '132', 'Тактика')
+					.row
+						.col-lg-9
+							p Наши специалисты предлагают индивидуальный подход к каждому клиенту на всех этапах взаимодействия. 
+				.col-md-6
+					h3 Компания &laquo;Тактика&raquo; предлагает полный спектр услуг на рынке коммерческой недвижимости. 
+					p Вот уже на протяжении пяти лет компания &laquo;Тактика&raquo; успешно работает в сегменте коммерческой недвижимости, предоставляя услуги в направлениях инвестиционного консалтинга и профессиональных брокерских услуг.
+
+		section.widget
+			.adv(style='background-image:url(t/6.jpg)')
+				.adv-inner.d-md-flex.justify-content-md-between.align-items-md-center
+					.adv-info
+						.adv-info-title
+							| Мы продали более 1000+
+							br
+							| квартир в России!
+						.adv-info-text Оставьте заявку для успешной сделки.
+					.adv-btn
+						span.btn-primary.btn Заказать звонок
+
+		section.widget
+			h2.widget-title Наши преимущества
+			.advantage-list.row
+				- var advantageList = [{type: 'consult', title: 'Консультация', content: 'Наши агенты бесплатно проконсультируют Вас по сделкам.'}, {type: 'search', title: 'Поиск объектов', content: 'Воспользуйтесь поиском объектов в нашем каталоге.'}, {type: 'compare', title: 'Сравните квартиры', content: 'Выберите нужные квартиры для сравнения их стоимости.'}, {type: 'sale', title: 'Выгодные предложения', content: 'Только у наших объектов вы сможете найти выгодные предложения.'}];
+				each advantage in advantageList
+					.col-md-3
+						div(class='advantage-item _'+ advantage.type)
+							.advantage-item-title= advantage.title
+							.advantage-item-info= advantage.content

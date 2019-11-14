@@ -1,0 +1,43 @@
+.promo {
+	&-container {
+		padding: {
+			top: 290px;
+			bottom: 200px;
+		}
+		color: $white;
+		background: {
+			color: $gray-700;
+			repeat: no-repeat;
+			size: cover;
+		}
+	}
+
+	&-inner {
+		max-width: 700px;
+	}
+
+	&-title {
+		font: {
+			size: 2.5rem;
+			weight: $font-weight-semibold;
+		}
+		line-height: 1.2;
+	}
+
+	&-subtitle {
+		margin-top: .8em;
+		font: {
+			size: 1.625rem;
+			weight: $font-weight-medium;
+		}
+		opacity: .65;
+	}
+
+	&-form {
+		margin-top: 3.5em;
+
+		.input-group-append {
+			margin-left: 3px;
+		}
+	}
+}

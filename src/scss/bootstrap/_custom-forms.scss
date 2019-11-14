@@ -213,7 +213,7 @@
   display: inline-block;
   width: 100%;
   height: $custom-select-height;
-  padding: $custom-select-padding-y ($custom-select-padding-x + $custom-select-indicator-padding) $custom-select-padding-y $custom-select-padding-x;
+  padding: $custom-select-padding-y ($custom-select-padding-x * .5 + $custom-select-indicator-padding) $custom-select-padding-y $custom-select-padding-x;
   font-family: $custom-select-font-family;
   @include font-size($custom-select-font-size);
   font-weight: $custom-select-font-weight;

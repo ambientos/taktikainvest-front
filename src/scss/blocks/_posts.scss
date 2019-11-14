@@ -1,0 +1,45 @@
+.posts {
+	&-item {
+		&-thumbnail {
+			margin-bottom: 0;
+		}
+
+		&-link {
+			display: block;
+		}
+
+		&-main {
+			min-height: 6em;
+			margin: 2em 0 0;
+			font-weight: $font-weight-semibold;
+			border-bottom: 1px solid $gray-200;
+		}
+
+		&-title {
+			display: -webkit-box;
+			max-height: 2.5em;
+			font-size: 1.125rem;
+			text-overflow: ellipsis;
+			color: $gray-900;
+			line-height: 1.2;
+			-webkit-line-clamp: 2;
+			overflow: hidden;
+			-webkit-box-orient: vertical;
+		}
+
+		&-price {
+			margin-top: .5em;
+			color: $secondary;
+		}
+
+		&-chrs {
+			margin-top: 1.3em;
+
+			&-item {
+				margin: .5em 0;
+				font-weight: $font-weight-medium;
+				color: lighten($body-color, 10%);
+			}
+		}
+	}
+}

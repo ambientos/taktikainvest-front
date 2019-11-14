@@ -1,0 +1,19 @@
+mixin postsItem(object)
+	article.posts-item
+		figure.posts-item-thumbnail
+			a.posts-item-link(href='/')
+				img.img-block.img-fluid(
+					src='t/' + object.thumb + '.jpg'
+					alt='')
+		.posts-item-main
+			a.posts-item-title(href='/')= object.title
+			.posts-item-price
+				if object.price
+					span= object.price
+				else
+					| Нет цены
+
+		if object.chrs
+			ul.posts-item-chrs.list-unstyled
+				each chr in object.chrs
+					li.posts-item-chrs-item!= chr

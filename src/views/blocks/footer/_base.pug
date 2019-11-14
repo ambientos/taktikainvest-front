@@ -1,0 +1,24 @@
+footer.footer
+	.container
+		.row
+			.col-md-5
+				+logo(' _home', true)
+
+			.col-md-3
+				+menu([{title: 'О компании'}, {title: 'Коммерческая недвижимость'}, {title: 'Арендный бизнес'}, {title: 'Услуги'}, {title: 'Вакансии'}, {title: 'Контакты'}], 'footer-menu list-unstyled')
+
+			.col-md-2
+				.footer-item
+					.footer-item-title
+						a.footer-tel-link.tel(href='tel:88005708950') 8 800 570 89 50
+					p.footer-item-content
+						a.footer-mail(href='mailto:mail@mail.com') mail@mail.com
+
+			.col-md-2
+				.footer-item
+					.footer-item-title Режим работы
+					p.footer-item-content Пн-Пт 09:00 - 18:00
+
+				.footer-item
+					.footer-item-title Адрес
+					p.footer-item-content г.&nbsp;Москва, Тверская&nbsp;11

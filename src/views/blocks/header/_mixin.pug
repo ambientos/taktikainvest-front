@@ -1,0 +1,18 @@
+mixin header(type)
+	- var _type = type ? ' _' + type : '';
+
+	header(class='header' + _type)
+		.container
+			.row.align-items-center.justify-content-between
+				.col-md
+					+logo(_type, true)
+
+				.col-md.d-md-flex.align-items-center.justify-content-end
+					.header-tel
+						a(
+							href='tel:88005708950'
+							class='header-tel-link tel' + _type
+						) 8 800 570 89 50
+
+					.header-call
+						span.btn-primary.btn Заказать звонок

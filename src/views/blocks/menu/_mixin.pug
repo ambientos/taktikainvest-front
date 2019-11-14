@@ -1,0 +1,12 @@
+mixin menu(list, classes)
+	- var _classes = classes ? classes + ' ' : '';
+
+	if list
+		ul(class=_classes + 'menu')
+			each listItem in list
+				li(class='nav-item'+ ( listItem.items ? ' menu-item-has-children' : '' ))
+					a.nav-link(href='/')= listItem.title
+					if listItem.items
+						.dropdown-menu
+							each listSubItem in listItem.items
+								a.dropdown-item(href='/')= listSubItem

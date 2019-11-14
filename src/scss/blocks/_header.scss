@@ -1,0 +1,37 @@
+.header {
+	padding: $grid-gutter-width * .5 0;
+
+	&._home {
+		position: relative;
+		border-bottom: 2px solid rgba($white, .15);
+	}
+
+	&-home {
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		color: $white;
+	}
+
+	&-logo {
+		margin-bottom: 0;
+	}
+
+	&-tel {
+		&-link {
+			margin-right: 1em;
+			font: {
+				family: $font-sub;
+				size: 1.125rem;
+				weight: $font-weight-semibold;
+			}
+			letter-spacing: .1em;
+
+			&,
+			&:hover {
+				color: inherit;
+			}
+		}
+	}
+}
