@@ -3,4 +3,65 @@ extends ./layout/general.pug
 block meta
 	title Контакты
 
+block scripts
+	- var scripts = [{file: 'https://api-maps.yandex.ru/2.1/', version: '20191114&lang=ru_RU&apikey=d55dfa8b-dca3-41ed-af8d-f7469afed85c'}, {file: 'js/maps.build.js', version: '20191114'}];
+
+	each scriptItem in scripts
+		script(src=scriptItem.file + '?v=' + scriptItem.version, defer)
+
 block content
+	main.main
+		.container
+			.row
+				.col-md-6
+					h1.widget-title Контакты
+
+					.row
+						.col-sm-6.contacts-item
+							.contacts-item-title Режим работы
+							p Пн-Пт 09:00 - 18:00
+						.col-sm-6.contacts-item
+							.contacts-item-title Адрес
+							p г. Москва, Тверская 11
+						.col-sm-12.contacts-item
+							.contacts-item-title
+								a.tel(href='tel:88005708950') 8 800 570 89 50
+							p
+								a(href='mailto:mail@mail.com') mail@mail.com
+
+				.col-md-6
+					form.form
+						h5.form-title У вас остались вопросы?
+						p.form-info Заполните форму, и наши менеджеры свяжутся с вами
+						.row
+							.form-group.col-md
+								input.form-control(
+									type='text'
+									name='your-name'
+									placeholder='Ваше имя')
+							.form-group.col-md
+								input.form-control(
+									type='tel'
+									name='your-tel'
+									placeholder='Номер телефона')
+						.form-group
+							textarea.form-control(
+								name='your-message'
+								placeholder='Ваше сообщение')
+						.row
+							.form-group.col-md
+								input.btn-primary.btn-block.btn(
+									type='submit'
+									value='Отправить')
+							.form-group.col-md
+								label.custom-control.custom-checkbox
+									input.custom-control-input(
+										type='checkbox'
+										value='')
+									.form-accept.custom-control-label
+										| Согласен с 
+										a(href='/') политикой конфиденциальности 
+										| сайта
+
+			#contacts-map.contacts-map.map(
+				data-map='{"zoom" : "16", "latitude" : "55.77497626047474", "longitude" : "37.60928011373903"}')

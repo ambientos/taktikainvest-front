@@ -72,7 +72,6 @@
 
   .dropdown-menu {
     position: static;
-    float: none;
   }
 }
 
@@ -201,6 +200,17 @@
   }
 }
 
+.navbar-light {
+  .navbar-toggler {
+    color: $navbar-dark-color;
+    border-color: $navbar-light-toggler-border-color;
+  }
+
+  .navbar-toggler-icon {
+    background-image: $navbar-light-toggler-icon-bg;
+  }
+}
+
 
 .navbar-social {
   &-item {
@@ -228,7 +238,113 @@
   }
 }
 
+.navbar-nav {
+  &._home {
+    .dropdown-menu {
+      border-bottom: 2px solid rgba($white, .15);
+    }
+
+    li {
+      font-weight: $font-weight-semibold;
+    }
+
+    a {
+      color: inherit;
+
+      &:hover {
+        color: $secondary;
+      }
+    }
+  }
+
+  .menu-item-has-children {
+    position: relative;
+
+    > a::after {
+      $size: .625rem;
+
+      display: inline-block;
+      position: relative;
+      top: -.1em;
+      width: $size;
+      height: $size;
+      margin-left: .7em;
+      border: {
+        width: 2px;
+        style: none solid solid none;
+      }
+      content: '';
+      transform: rotate(45deg);
+    }
+  }
+}
+
 .navbar-top {
+  padding: 0;
+
+  &:not(._home) {
+    color: $gray-600;
+
+    @include media-breakpoint-up('lg') {
+      box-shadow: 0 6px 20px 0 rgba($black, .05);
+    }
+
+    @include media-breakpoint-down('md') {
+      background: $gray-100;
+    }
+
+    .dropdown-menu {
+      @include media-breakpoint-up('lg') {
+        padding: 0 1em 1em;
+        background-color: $white;
+        box-shadow: 0 6px 20px 0 rgba($black, .05);
+      }
+    }
+  }
+
+  .nav-item {
+    @include media-breakpoint-up('xl') {
+      padding-right: 1.9rem;
+    }
+
+    &:hover {
+      > .dropdown-menu {
+        display: block;
+      }
+    }
+  }
+
+  .nav-link {
+    @include media-breakpoint-up('lg') {
+      $padding-y: 1.5rem;
+
+      padding: {
+        top: $padding-y;
+        bottom: $padding-y;
+      }
+    }
+  }
+
+  .dropdown {
+    &-menu {
+      display: none;
+      left: $navbar-nav-link-padding-x;
+      top: 90%;
+      right: $navbar-nav-link-padding-x;
+      padding-bottom: .8em;
+      z-index: 3;
+
+      @include media-breakpoint-down('md') {
+        margin-left: 1em;
+      }
+    }
+
+    &-item {
+      display: block;
+      margin: .3em 0;
+    }
+  }
+
   @include media-breakpoint-down('md') {
     z-index: 3;
 
@@ -237,12 +353,20 @@
       color: $body-color;
       background-color: $white;
       opacity: 0;
-      box-shadow: 0 5px 12px -5px rgba($black, .8);
+      box-shadow: 0 5px 12px -5px rgba($black, .1);
       @include transition;
 
       &.show {
         opacity: 1;
       }
+    }
+  }
+
+  a {
+    color: inherit;
+
+    &:hover {
+      color: $secondary;
     }
   }
 }

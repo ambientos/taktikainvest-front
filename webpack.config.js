@@ -8,6 +8,7 @@ module.exports = {
 	context: __dirname + srcPath,
 	entry: {
 		bootstrap: './bootstrap/index.js',
+		maps: './maps/index.js',
 		site: './site/index.js'
 	},
 	output: {

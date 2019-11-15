@@ -11,6 +11,15 @@
   overflow: hidden;
   word-wrap: normal !important; }
 
+.main:not(._home) {
+  background-color: #fafafa; }
+  @media (min-width: 992px) {
+    .main:not(._home) {
+      padding: 2.5em 0 8em; } }
+  @media (max-width: 991.98px) {
+    .main:not(._home) {
+      padding: 2em 0 4em; } }
+
 @font-face {
   font-family: "Lato";
   font-weight: 400;
@@ -61,12 +70,27 @@
   src: url("../fonts/Montserrat/extrabold.woff2?v=20191112") format("woff2"), url("../fonts/Montserrat/extrabold.woff?v=20191112") format("woff"); }
 
 .header {
-  padding: 15px 0; }
+  position: relative;
+  padding: 15px 0;
+  z-index: 4; }
+  .header:not(._home) {
+    color: #1e1e1e; }
+    @media (max-width: 991.98px) {
+      .header:not(._home) {
+        -webkit-box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.05);
+                box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.05); } }
+  @media (min-width: 992px) {
+    .header {
+      border-bottom-width: 2px;
+      border-bottom-style: solid; } }
+  @media (min-width: 992px) {
+    .header:not(._home) {
+      border-bottom-color: rgba(0, 0, 0, 0.15); } }
   .header._home {
     position: relative; }
     @media (min-width: 992px) {
       .header._home {
-        border-bottom: 2px solid rgba(255, 255, 255, 0.15); } }
+        border-bottom-color: rgba(255, 255, 255, 0.15); } }
   .header-home {
     position: absolute;
     left: 0;
@@ -118,56 +142,13 @@
     .d-flex > .logo-title {
       margin-left: 2em; }
   .logo-link, .logo-link:hover {
-    color: currentColor; }
+    color: inherit; }
   @media (min-width: 768px) and (max-width: 991.98px) {
     .logo-thumb._home, .logo-thumb._nav {
       width: 60px; } }
   @media (max-width: 767.98px) {
     .logo-thumb._home, .logo-thumb._nav {
       width: 32px; } }
-
-.menu._home .dropdown-menu {
-  border-bottom: 2px solid rgba(255, 255, 255, 0.15); }
-
-@media (min-width: 1200px) {
-  .menu._home .nav-item {
-    padding-right: 1.9rem; } }
-
-.menu._home li {
-  font-weight: 600; }
-
-.menu._home a {
-  color: inherit; }
-  .menu._home a:hover {
-    color: #4d6de6; }
-
-.menu-item-has-children {
-  position: relative; }
-  .menu-item-has-children > a::after {
-    display: inline-block;
-    position: relative;
-    top: -.1em;
-    width: 0.625rem;
-    height: 0.625rem;
-    margin-left: .7em;
-    border-width: 2px;
-    border-style: none solid solid none;
-    content: '';
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg); }
-
-.menu .nav-item:hover > .dropdown-menu {
-  display: block; }
-
-.menu .dropdown-menu {
-  display: none;
-  left: 0.5rem;
-  right: 0.5rem;
-  padding-bottom: .8em; }
-
-.menu .dropdown-item {
-  display: block;
-  margin: .3em 0; }
 
 .footer {
   color: #fff;
@@ -228,7 +209,7 @@
       padding-bottom: 80px; } }
   @media (min-width: 992px) {
     .promo-container {
-      padding-top: 230px;
+      padding-top: 290px;
       padding-bottom: 100px; } }
   @media (min-width: 1200px) {
     .promo-container {
@@ -397,5 +378,62 @@
 
 .advantage-item-info {
   margin-top: 1em; }
+
+@media (min-width: 992px) {
+  .contacts-item {
+    margin-bottom: 2.5em; } }
+
+@media (max-width: 991.98px) {
+  .contacts-item {
+    margin-bottom: 1em; } }
+
+.contacts-item-title {
+  margin-bottom: .5em;
+  font-weight: 600;
+  color: #1e1e1e; }
+  @media (min-width: 992px) {
+    .contacts-item-title {
+      font-size: 1.125rem; } }
+  @media (max-width: 991.98px) {
+    .contacts-item-title {
+      font-size: 1rem; } }
+  .contacts-item-title .tel {
+    font-size: 1.375rem; }
+  .contacts-item-title a {
+    color: inherit; }
+
+.contacts-item a {
+  color: inherit; }
+
+.contacts-map {
+  height: 270px; }
+  @media (min-width: 992px) {
+    .contacts-map {
+      margin-top: 5em; } }
+  @media (max-width: 991.98px) {
+    .contacts-map {
+      margin-top: 2em; } }
+
+.form {
+  background-color: #fff; }
+  @media (min-width: 992px) {
+    .form {
+      padding: 2.5em; } }
+  @media (max-width: 991.98px) {
+    .form {
+      padding: 1em; } }
+  .form-title, .form-info {
+    line-height: 1.2;
+    text-align: center; }
+  .form-info {
+    margin-top: -1em;
+    margin-bottom: 2em; }
+  .form-accept {
+    font-size: .875rem;
+    color: #1e1e1e; }
+
+.map {
+  padding: .4em;
+  background: #fff; }
 
 /*# sourceMappingURL=site.css.map */

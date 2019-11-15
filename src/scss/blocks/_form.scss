@@ -1,0 +1,29 @@
+.form {
+	background-color: $white;
+
+	@include media-breakpoint-up('lg') {
+		padding: 2.5em;
+	}
+
+	@include media-breakpoint-down('md') {
+		padding: 1em;
+	}
+
+	&-title,
+	&-info {
+		line-height: 1.2;
+		text-align: center;
+	}
+
+	&-info {
+		margin: {
+			top: -1em;
+			bottom: 2em;
+		}
+	}
+
+	&-accept {
+		font-size: .875rem;
+		color: $gray-900;
+	}
+}

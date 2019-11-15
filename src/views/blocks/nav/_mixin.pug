@@ -6,8 +6,10 @@ mixin nav(type)
 			.collapse.navbar-collapse.justify-content-between.show-control#navbarSupportedContent
 				+menu([{title: 'О компании'}, {title: 'Арендный бизнес'}, {title: 'Коммерческая недвижимость', items: ['Офисы', 'Торговые площади', 'Склады/Производство']}, {title: 'Услуги'}, {title: 'Вакансии'}, {title: 'Контакты'}], 'navbar-nav' + _type)
 
-				.navbar-call.d-lg-none
-					include ../header/_tel.pug
-					include ../header/_call-button.pug
+				.navbar-call
+					.d-lg-none
+						include ../header/_tel.pug
+					.d-sm-none
+						include ../header/_call-button.pug
 
 				include ./_social.pug

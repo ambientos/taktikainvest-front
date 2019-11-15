@@ -1,8 +1,8 @@
 mixin menu(list, classes)
-	- var _classes = classes ? classes + ' ' : '';
+	- var _classes = classes ? classes : '';
 
 	if list
-		ul(class=_classes + 'menu')
+		ul(class=_classes)
 			each listItem in list
 				li(class='nav-item'+ ( listItem.items ? ' menu-item-has-children' : '' ))
 					a.nav-link(href='/')= listItem.title

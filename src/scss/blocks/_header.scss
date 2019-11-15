@@ -1,11 +1,34 @@
 .header {
+	position: relative;
 	padding: $grid-gutter-width * .5 0;
+	z-index: 4;
+
+	&:not(._home) {
+		color: $gray-900;
+
+		@include media-breakpoint-down('md') {
+			box-shadow: 0 6px 20px 0 rgba($black, .05);
+		}
+	}
+
+	@include media-breakpoint-up('lg') {
+		border-bottom: {
+			width: 2px;
+			style: solid;
+		}
+	}
+
+	&:not(._home) {
+		@include media-breakpoint-up('lg') {
+			border-bottom-color: rgba($black, .15);
+		}
+	}
 
 	&._home {
 		position: relative;
 
 		@include media-breakpoint-up('lg') {
-			border-bottom: 2px solid rgba($white, .15);
+			border-bottom-color: rgba($white, .15);
 		}
 	}
 

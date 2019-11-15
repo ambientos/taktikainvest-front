@@ -12,3 +12,15 @@
 	overflow: hidden;
 	word-wrap: normal !important;
 }
+
+.main:not(._home) {
+	background-color: $gray-100;
+
+	@include media-breakpoint-up('lg') {
+		padding: 2.5em 0 8em;
+	}
+
+	@include media-breakpoint-down('md') {
+		padding: 2em 0 4em;
+	}
+}
