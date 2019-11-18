@@ -132,7 +132,7 @@ sup {
 
 a {
   color: #47049c;
-  text-decoration: none;
+  text-decoration: underline;
   background-color: transparent;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out; }
@@ -2037,7 +2037,7 @@ fieldset:disabled a.btn {
 .btn-link {
   font-weight: 400;
   color: #47049c;
-  text-decoration: none; }
+  text-decoration: underline; }
   .btn-link:hover {
     color: #6906e7;
     text-decoration: none; }
@@ -2591,7 +2591,8 @@ input[type="button"].btn-block {
 
 .nav-link {
   display: block;
-  padding: 0.5rem 1rem; }
+  padding: 0.5rem 1rem;
+  text-decoration: none; }
   @media (max-width: 991.98px) {
     .nav-link {
       padding: 0.25rem 1rem; } }
@@ -3014,7 +3015,8 @@ input[type="button"].btn-block {
         margin-left: 1em; } }
   .navbar-top .dropdown-item {
     display: block;
-    margin: .3em 0; }
+    margin: .3em 0;
+    text-decoration: none; }
   @media (max-width: 991.98px) {
     .navbar-top {
       z-index: 3; }

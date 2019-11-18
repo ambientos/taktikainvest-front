@@ -1,0 +1,13 @@
+.breadcrumbs {
+	margin-bottom: 1.5em;
+	font-size: .875rem;
+
+	.delimiter {
+		margin: 0 1.1em 0 .8em;
+		color: $secondary;
+	}
+
+	a {
+		text-decoration: none;
+	}
+}

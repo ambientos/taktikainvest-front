@@ -41,7 +41,10 @@
 		&-title {
 			display: -webkit-box;
 			max-height: 2.5em;
-			text-overflow: ellipsis;
+			text: {
+				decoration: none;
+				overflow: ellipsis;
+			}
 			color: $gray-900;
 			line-height: 1.2;
 			-webkit-line-clamp: 2;

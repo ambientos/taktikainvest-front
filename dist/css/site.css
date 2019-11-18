@@ -110,7 +110,8 @@
         letter-spacing: 0;
         color: #1e1e1e; } }
     .header-tel-link {
-      margin-right: 1em; }
+      margin-right: 1em;
+      text-decoration: none; }
       .header-tel-link, .header-tel-link:hover {
         color: inherit; }
 
@@ -142,6 +143,7 @@
     .d-flex > .logo-title {
       margin-left: 2em; }
   .logo-link, .logo-link:hover {
+    text-decoration: none;
     color: inherit; }
   @media (min-width: 768px) and (max-width: 991.98px) {
     .logo-thumb._home, .logo-thumb._nav {
@@ -170,6 +172,8 @@
         font-size: 1.125rem; } }
   .footer-item-content {
     color: #7a7979; }
+  .footer-item a {
+    text-decoration: none; }
   @media (max-width: 767.98px) {
     .footer-menu {
       margin: 2em 0; } }
@@ -182,6 +186,15 @@
     color: inherit; }
     .footer a:hover {
       color: #adb5bd; }
+
+.breadcrumbs {
+  margin-bottom: 1.5em;
+  font-size: .875rem; }
+  .breadcrumbs .delimiter {
+    margin: 0 1.1em 0 .8em;
+    color: #4d6de6; }
+  .breadcrumbs a {
+    text-decoration: none; }
 
 @media (min-width: 768px) {
   .widget {
@@ -277,6 +290,7 @@
 .posts-item-title {
   display: -webkit-box;
   max-height: 2.5em;
+  text-decoration: none;
   text-overflow: ellipsis;
   color: #1e1e1e;
   line-height: 1.2;
@@ -306,6 +320,51 @@
     @media (max-width: 767.98px) {
       .posts-item-chrs-item {
         font-size: .875rem; } }
+
+.estate-title {
+  font-size: 1.375rem; }
+
+.estate-price {
+  margin-bottom: .5em;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #4d6de6;
+  font-size: 1.375rem; }
+  @media (max-width: 1200px) {
+    .estate-price {
+      font-size: calc(1.2625rem + 0.15vw) ; } }
+  .estate-price-container {
+    margin-bottom: 2.0625em;
+    text-align: right; }
+
+.estate-print {
+  margin-bottom: 1.25em; }
+
+.estate-thumb {
+  margin-bottom: 3px; }
+  .estate-thumb-item {
+    position: relative;
+    margin: 0 1.5px 3px;
+    padding: 0;
+    border: none; }
+    .estate-thumb-item::before {
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      content: '';
+      border: 3px solid #97172a;
+      background-color: rgba(255, 255, 255, 0.3);
+      opacity: 0;
+      -webkit-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out; }
+      @media (prefers-reduced-motion: reduce) {
+        .estate-thumb-item::before {
+          -webkit-transition: none;
+          transition: none; } }
+    .estate-thumb-item.active::before {
+      opacity: 1; }
 
 .adv-inner {
   color: #fff; }

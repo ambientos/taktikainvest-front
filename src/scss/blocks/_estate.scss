@@ -1,0 +1,55 @@
+.estate {
+	&-title {
+		font-size: 1.375rem;
+	}
+
+	&-price {
+		margin-bottom: .5em;
+		font-weight: $font-weight-bold;
+		line-height: 1.2;
+		color: $secondary;
+
+		@include font-size(1.375rem);
+
+		&-container {
+			margin-bottom: 2.0625em;
+			text-align: right;
+		}
+	}
+
+	&-print {
+		margin-bottom: 1.25em;
+	}
+
+	&-thumb {
+		$margin: 3px;
+
+		margin-bottom: $margin;
+
+		&-item {
+			position: relative;
+			margin: 0 $margin * .5 $margin;
+			padding: 0;
+			border: none;
+
+			&::before {
+				position: absolute;
+				left: 0;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				content: '';
+				border: 3px solid $red;
+				background-color: rgba($white, .3);
+				opacity: 0;
+				@include transition;
+			}
+
+			&.active {
+				&::before {
+					opacity: 1;
+				}
+			}
+		}
+	}
+}

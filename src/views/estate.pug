@@ -1,0 +1,42 @@
+extends ./layout/general.pug
+
+block meta
+	title Объект недвижимости
+
+block content
+	main.main
+		.container
+			+breadcrumbs({items: ['Главная', 'Торговая недвижимость', 'Офис 980 кв. м']})
+
+			.row.align-items-md-end
+				.col-md-6
+					h1.estate-title Офис 980 кв. м
+
+				.estate-price-container.col-md-6
+					.estate-price 355 000 000 ₽
+					.estate-square
+						| Площадь: 980.00 м
+						sup 2
+
+			.estate-print
+				a(href='/') Распечатать
+
+			.row
+				.col-md-6
+					figure.estate-thumb
+						.carousel-container(
+							data-items='1'
+							data-margin='15'
+							data-dots-container='.estate-thumb-list')
+							.carousel.owl-carousel
+								img.img-fluid.img-block(src='t/7.jpg' alt)
+								img.img-fluid.img-block(src='t/7.jpg' alt)
+								img.img-fluid.img-block(src='t/7.jpg' alt)
+								img.img-fluid.img-block(src='t/7.jpg' alt)
+					.estate-thumb-list.d-flex.flex-wrap.justify-content-center
+						- var productThumbs = ['8', '9', '10', '11'];
+						each productThumb in productThumbs
+							button.estate-thumb-item
+								img.img-fluid.img-block(src='t/'+ productThumb +'.jpg' alt)
+
+				.col-md-6

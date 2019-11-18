@@ -10,7 +10,7 @@
 		<meta name="format-detection" content="telephone=no">
 		<meta name="format-detection" content="address=no">
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
-		<title>Контакты</title>
+		<title>Объект недвижимости</title>
 		<link rel="shortcut icon" href="favicon.ico">
 		<link rel="stylesheet" href="css/bootstrap.css?v=20191114" type="text/css">
 		<link rel="stylesheet" href="css/owl.carousel.css?v=20191114" type="text/css">
@@ -68,54 +68,37 @@
 		</nav>
 		<main class="main">
 			<div class="container">
-				<div class="row">
+				<div class="breadcrumbs" typeof="BreadcrumbList" vocab="http://schema.org/"><span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" href="/"><span property="name">Главная</span>
+							<meta property="position" content="1"/></a></span><span class="delimiter">/</span><span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" href="/"><span property="name">Торговая недвижимость</span>
+							<meta property="position" content="2"/></a></span><span class="delimiter">/</span><span property="itemListElement" typeof="ListItem"><span property="name">Офис 980 кв. м</span>
+						<meta property="position" content="3"/></span>
+				</div>
+				<div class="row align-items-md-end">
 					<div class="col-md-6">
-						<h1 class="widget-title">Контакты</h1>
-						<div class="row">
-							<div class="col-sm-6 contacts-item">
-								<div class="contacts-item-title">Режим работы</div>
-								<p>Пн-Пт 09:00 - 18:00</p>
-							</div>
-							<div class="col-sm-6 contacts-item">
-								<div class="contacts-item-title">Адрес</div>
-								<p>г. Москва, Тверская 11</p>
-							</div>
-							<div class="col-sm-12 contacts-item">
-								<div class="contacts-item-title"><a class="tel" href="tel:88005708950">8 800 570 89 50</a></div>
-								<p><a href="mailto:mail@mail.com">mail@mail.com</a></p>
-							</div>
-						</div>
+						<h1 class="estate-title">Офис 980 кв. м</h1>
 					</div>
-					<div class="col-md-6">
-						<form class="form">
-							<h5 class="form-title">У вас остались вопросы?</h5>
-							<p class="form-info">Заполните форму, и наши менеджеры свяжутся с вами</p>
-							<div class="row">
-								<div class="form-group col-md">
-									<input class="form-control-light form-control" type="text" name="your-name" placeholder="Ваше имя">
-								</div>
-								<div class="form-group col-md">
-									<input class="form-control-light form-control" type="tel" name="your-tel" placeholder="Номер телефона">
-								</div>
-							</div>
-							<div class="form-group">
-								<textarea class="form-control-light form-control" name="your-message" placeholder="Ваше сообщение"></textarea>
-							</div>
-							<div class="row">
-								<div class="form-group col-md">
-									<input class="btn-primary btn-block btn" type="submit" value="Отправить">
-								</div>
-								<div class="form-group col-md">
-									<label class="custom-control custom-checkbox">
-										<input class="custom-control-input" type="checkbox" value="">
-										<div class="form-accept custom-control-label">Согласен с <a href="/">политикой конфиденциальности </a>сайта</div>
-									</label>
-								</div>
-							</div>
-						</form>
+					<div class="estate-price-container col-md-6">
+						<div class="estate-price">355 000 000 ₽</div>
+						<div class="estate-square">Площадь: 980.00 м<sup>2</sup></div>
 					</div>
 				</div>
-				<div class="contacts-map map" id="contacts-map" data-map="{&quot;zoom&quot; : &quot;16&quot;, &quot;latitude&quot; : &quot;55.77497626047474&quot;, &quot;longitude&quot; : &quot;37.60928011373903&quot;}"></div>
+				<div class="estate-print"><a href="/">Распечатать</a></div>
+				<div class="row">
+					<div class="col-md-6">
+						<figure class="estate-thumb">
+							<div class="carousel-container" data-items="1" data-margin="15" data-dots-container=".estate-thumb-list">
+								<div class="carousel owl-carousel"><img class="img-fluid img-block" src="t/7.jpg" alt><img class="img-fluid img-block" src="t/7.jpg" alt><img class="img-fluid img-block" src="t/7.jpg" alt><img class="img-fluid img-block" src="t/7.jpg" alt></div>
+							</div>
+						</figure>
+						<div class="estate-thumb-list d-flex flex-wrap justify-content-center">
+							<button class="estate-thumb-item"><img class="img-fluid img-block" src="t/8.jpg" alt></button>
+							<button class="estate-thumb-item"><img class="img-fluid img-block" src="t/9.jpg" alt></button>
+							<button class="estate-thumb-item"><img class="img-fluid img-block" src="t/10.jpg" alt></button>
+							<button class="estate-thumb-item"><img class="img-fluid img-block" src="t/11.jpg" alt></button>
+						</div>
+					</div>
+					<div class="col-md-6"></div>
+				</div>
 			</div>
 		</main>
 		<footer class="footer">
@@ -163,7 +146,5 @@
 		<script src="js/bootstrap.build.js?v=20191114"></script>
 		<script src="js/owl.carousel.min.js?v=20191114"></script>
 		<script src="js/site.build.js?v=20191114"></script>
-		<script src="https://api-maps.yandex.ru/2.1/?v=20191114&amp;lang=ru_RU&amp;apikey=d55dfa8b-dca3-41ed-af8d-f7469afed85c" defer></script>
-		<script src="js/maps.build.js?v=20191114" defer></script>
 	</body>
 </html>
