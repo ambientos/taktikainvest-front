@@ -1,4 +1,11 @@
-@import 'owl-carousel/core';
-@import 'owl-carousel/animate';
-@import 'owl-carousel/autoheight';
-@import 'owl-carousel/lazyload';
+@import "variables";
+@import "mixins";
+
+@import "bootstrap/functions";
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+
+@import "owl-carousel/core";
+@import "owl-carousel/animate";
+@import "owl-carousel/autoheight";
+@import "owl-carousel/lazyload";

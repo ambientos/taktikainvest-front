@@ -44,6 +44,8 @@
   .owl-carousel .owl-item img {
     display: block;
     width: 100%; }
+  .owl-carousel .owl-nav {
+    margin-top: 2em; }
   .owl-carousel .owl-nav.disabled,
   .owl-carousel .owl-dots.disabled {
     display: none; }
@@ -55,8 +57,6 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none; }
-  .owl-carousel .owl-nav button.owl-prev,
-  .owl-carousel .owl-nav button.owl-next,
   .owl-carousel button.owl-dot {
     background: none;
     color: inherit;
@@ -87,6 +87,51 @@
     direction: rtl; }
   .owl-carousel.owl-rtl .owl-item {
     float: right; }
+
+button.owl-prev, button.owl-next {
+  padding: .6em .4em;
+  vertical-align: top;
+  border: none;
+  background: transparent; }
+  button.owl-prev.disabled, button.owl-prev.disabled:hover, button.owl-next.disabled, button.owl-next.disabled:hover {
+    cursor: default; }
+    button.owl-prev.disabled i::before, button.owl-prev.disabled i::after, button.owl-prev.disabled:hover i::before, button.owl-prev.disabled:hover i::after, button.owl-next.disabled i::before, button.owl-next.disabled i::after, button.owl-next.disabled:hover i::before, button.owl-next.disabled:hover i::after {
+      border-color: #adb5bd; }
+  button.owl-prev:hover i::before, button.owl-prev:hover i::after, button.owl-next:hover i::before, button.owl-next:hover i::after {
+    border-color: #4d6de6; }
+  button.owl-prev i, button.owl-next i {
+    display: block;
+    position: relative;
+    width: 25px; }
+    button.owl-prev i::before, button.owl-prev i::after, button.owl-next i::before, button.owl-next i::after {
+      display: block;
+      content: '';
+      -webkit-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out; }
+      @media (prefers-reduced-motion: reduce) {
+        button.owl-prev i::before, button.owl-prev i::after, button.owl-next i::before, button.owl-next i::after {
+          -webkit-transition: none;
+          transition: none; } }
+    button.owl-prev i::before, button.owl-next i::before {
+      border-top: 2px solid #47049c; }
+    button.owl-prev i::after, button.owl-next i::after {
+      position: absolute;
+      top: -4px;
+      width: 10px;
+      height: 10px;
+      border-width: 2px;
+      border-style: solid;
+      border-color: #47049c;
+      -webkit-transform: rotate(45deg);
+              transform: rotate(45deg); }
+
+button.owl-prev i::after {
+  left: 0;
+  border-style: none none solid solid; }
+
+button.owl-next i::after {
+  right: 0;
+  border-style: solid solid none none; }
 
 /* No Js */
 .no-js .owl-carousel {

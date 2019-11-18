@@ -12,6 +12,10 @@
 			margin-bottom: 1.875em;
 		}
 
+		.owl-item > & {
+			margin-bottom: 0;
+		}
+
 		&-thumbnail {
 			margin-bottom: 0;
 		}

@@ -1,12 +1,17 @@
 .form {
 	background-color: $white;
+	box-shadow: 0 15px 20px 0 rgba($gray-600, .05);
 
 	@include media-breakpoint-up('lg') {
-		padding: 2.5em;
+		$padding: 2.5em;
+
+		padding: $padding $padding $padding * .3;
 	}
 
 	@include media-breakpoint-down('md') {
-		padding: 1em;
+		$padding: 1em;
+
+		padding: $padding $padding $padding * .3;
 	}
 
 	&-title,

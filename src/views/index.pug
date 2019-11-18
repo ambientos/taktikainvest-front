@@ -13,7 +13,7 @@ block top
 block content
 	main.main._home
 		.container
-			section.widget
+			section.widget._lg
 				h2.widget-title Новинки
 				.posts-list
 					.row
@@ -22,7 +22,7 @@ block content
 							.col-lg-3.col-sm-6
 								+postsItem(post)
 
-			section.widget._about
+			section.widget._lg._about
 				h2.widget-title О компании
 				.row
 					.col-md-6.d-none.d-md-block
@@ -34,7 +34,7 @@ block content
 						h3 Компания &laquo;Тактика&raquo; предлагает полный спектр услуг на рынке коммерческой недвижимости. 
 						p Вот уже на протяжении пяти лет компания &laquo;Тактика&raquo; успешно работает в сегменте коммерческой недвижимости, предоставляя услуги в направлениях инвестиционного консалтинга и профессиональных брокерских услуг.
 
-			section.widget
+			section.widget._lg
 				.adv(style='background-image:url(t/6.jpg)')
 					.adv-inner.d-md-flex.justify-content-md-between.align-items-md-center
 						.adv-info
@@ -46,7 +46,7 @@ block content
 						.adv-btn
 							span.btn-primary.btn Заказать звонок
 
-			section.widget
+			section.widget._lg
 				h2.widget-title Наши преимущества
 				.advantage-list.row
 					- var advantageList = [{type: 'consult', title: 'Консультация', content: 'Наши агенты бесплатно проконсультируют Вас по сделкам.'}, {type: 'search', title: 'Поиск объектов', content: 'Воспользуйтесь поиском объектов в нашем каталоге.'}, {type: 'compare', title: 'Сравните квартиры', content: 'Выберите нужные квартиры для сравнения их стоимости.'}, {type: 'sale', title: 'Выгодные предложения', content: 'Только у наших объектов вы сможете найти выгодные предложения.'}];

@@ -55,6 +55,10 @@
 		width: 100%;
 	}
 
+	.owl-nav {
+		margin-top: 2em;
+	}
+
 	.owl-nav.disabled,
 	.owl-dots.disabled {
 		display: none;
@@ -71,8 +75,6 @@
 		user-select: none;
 	}
 
-	.owl-nav button.owl-prev,
-	.owl-nav button.owl-next,
 	button.owl-dot {
 		background: none;
 		color: inherit;
@@ -117,6 +119,96 @@
 
 	&.owl-rtl .owl-item {
 		float: right;
+	}
+}
+
+button {
+	$size: 25px;
+	$border-width: 2px;
+	$color-inactive: $gray-500;
+	$color: $primary;
+	$color-active: $secondary;
+
+	&.owl-prev,
+	&.owl-next {
+		padding: .6em .4em;
+		vertical-align: top;
+		border: none;
+		background: transparent;
+
+		&.disabled {
+			&,
+			&:hover {
+				cursor: default;
+
+				i {
+					&::before,
+					&::after {
+						border-color: $color-inactive;
+					}
+				}
+			}
+		}
+
+		&:hover {
+			i {
+				&::before,
+				&::after {
+					border-color: $color-active;
+				}
+			}
+		}
+
+		i {
+			display: block;
+			position: relative;
+			width: $size;
+
+			&::before,
+			&::after {
+				display: block;
+				content: '';
+
+				@include transition;
+			}
+
+			&::before {
+				border-top: $border-width solid $color;
+			}
+
+			&::after {
+				$size: $size * .4;
+
+				position: absolute;
+				top: -$size * .4;
+				width: $size;
+				height: $size;
+				border: {
+					width: $border-width;
+					style: solid;
+					color: $color;
+				}
+				transform: rotate(45deg);
+			}
+		}
+	}
+
+	&.owl-prev {
+		i {
+			&::after {
+				left: 0;
+				border-style: none none solid solid;
+			}
+		}
+	}
+
+	&.owl-next {
+		i {
+			&::after {
+				right: 0;
+				border-style: solid solid none none;
+			}
+		}
 	}
 }
 

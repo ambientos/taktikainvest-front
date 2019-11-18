@@ -1,0 +1,5 @@
+mixin mapScripts()
+	- var scripts = [{file: 'https://api-maps.yandex.ru/2.1/', version: '20191114&lang=ru_RU&apikey=d55dfa8b-dca3-41ed-af8d-f7469afed85c'}, {file: 'js/maps.build.js', version: '20191114'}];
+
+	each scriptItem in scripts
+		script(src=scriptItem.file + '?v=' + scriptItem.version, defer)

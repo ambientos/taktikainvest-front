@@ -11,11 +11,14 @@
   overflow: hidden;
   word-wrap: normal !important; }
 
+.tel {
+  text-decoration: none; }
+
 .main:not(._home) {
   background-color: #fafafa; }
   @media (min-width: 992px) {
     .main:not(._home) {
-      padding: 2.5em 0 8em; } }
+      padding: 2.5em 0 6em; } }
   @media (max-width: 991.98px) {
     .main:not(._home) {
       padding: 2em 0 4em; } }
@@ -110,8 +113,7 @@
         letter-spacing: 0;
         color: #1e1e1e; } }
     .header-tel-link {
-      margin-right: 1em;
-      text-decoration: none; }
+      margin-right: 1em; }
       .header-tel-link, .header-tel-link:hover {
         color: inherit; }
 
@@ -196,12 +198,15 @@
   .breadcrumbs a {
     text-decoration: none; }
 
+.widget._md {
+  margin: 2.5em 0; }
+
 @media (min-width: 768px) {
-  .widget {
+  .widget._lg {
     margin: 6.25em 0; } }
 
 @media (max-width: 767.98px) {
-  .widget {
+  .widget._lg {
     margin: 2.5em 0; } }
 
 .widget-title::after {
@@ -267,6 +272,9 @@
   .posts-item {
     margin-bottom: 1.875em; } }
 
+.owl-item > .posts-item {
+  margin-bottom: 0; }
+
 .posts-item-thumbnail {
   margin-bottom: 0; }
 
@@ -321,6 +329,18 @@
       .posts-item-chrs-item {
         font-size: .875rem; } }
 
+@media (min-width: 992px) {
+  .estate-side-1 {
+    padding-right: 30px; }
+  .estate-side-2 {
+    padding-left: 30px; } }
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .estate-side-1 {
+    padding-right: 20.01px; }
+  .estate-side-2 {
+    padding-left: 20.01px; } }
+
 .estate-title {
   font-size: 1.375rem; }
 
@@ -334,19 +354,32 @@
     .estate-price {
       font-size: calc(1.2625rem + 0.15vw) ; } }
   .estate-price-container {
-    margin-bottom: 2.0625em;
-    text-align: right; }
+    margin-bottom: 2.0625em; }
+    @media (min-width: 768px) {
+      .estate-price-container {
+        text-align: right; } }
 
 .estate-print {
   margin-bottom: 1.25em; }
 
 .estate-thumb {
   margin-bottom: 3px; }
+  .estate-thumb-list {
+    margin-bottom: 2em; }
   .estate-thumb-item {
     position: relative;
     margin: 0 1.5px 3px;
     padding: 0;
     border: none; }
+    @media (min-width: 992px) {
+      .estate-thumb-item {
+        width: 101px; } }
+    @media (min-width: 576px) and (max-width: 991.98px) {
+      .estate-thumb-item {
+        width: 79px; } }
+    @media (max-width: 575.98px) {
+      .estate-thumb-item {
+        width: 70px; } }
     .estate-thumb-item::before {
       position: absolute;
       left: 0;
@@ -365,6 +398,80 @@
           transition: none; } }
     .estate-thumb-item.active::before {
       opacity: 1; }
+
+.estate-desc {
+  font-size: 1.125rem;
+  color: #000; }
+  @media (max-width: 767.98px) {
+    .estate-desc {
+      margin-top: 2em; } }
+
+.estate-metro {
+  position: relative;
+  margin-top: 1.5em;
+  padding-left: 30px; }
+  .estate-metro::before {
+    position: absolute;
+    left: 0;
+    top: .3em;
+    width: 17px;
+    height: 17px;
+    content: '';
+    background-repeat: no-repeat;
+    background-image: url("../i/metro.png");
+    background-size: 17px auto; }
+
+.estate-map {
+  height: 290px;
+  margin-top: 1.5em; }
+
+@media (min-width: 992px) {
+  .estate-realtor {
+    margin: 1.5em 0 3.5em; } }
+
+@media (max-width: 1199.98px) {
+  .estate-realtor {
+    margin: 1.5em 0; } }
+
+@media (min-width: 992px) {
+  .estate-realtor {
+    padding: 0 2.5em; } }
+
+@media (max-width: 575.98px) {
+  .estate-realtor {
+    text-align: center; } }
+
+@media (min-width: 576px) {
+  .estate-realtor-info {
+    margin-right: 30px; } }
+
+.estate-realtor-name {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #000; }
+
+.estate-realtor-mail {
+  display: block;
+  margin: .5em 0;
+  color: #7a7979; }
+
+.estate-realtor-tel {
+  margin: .5em 0 0; }
+
+.estate-realtor-thumb {
+  margin-top: .5em; }
+  @media (max-width: 575.98px) {
+    .estate-realtor-thumb {
+      margin-top: 1.5em; } }
+
+.estate-chr {
+  margin-top: 1.2em;
+  padding: .5em 0;
+  border-bottom: 1px solid #e5e5e5; }
+  .estate-chr-list {
+    max-width: 445px; }
+  .estate-chr-title {
+    color: #1e1e1e; }
 
 .adv-inner {
   color: #fff; }
@@ -474,13 +581,15 @@
       margin-top: 2em; } }
 
 .form {
-  background-color: #fff; }
+  background-color: #fff;
+  -webkit-box-shadow: 0 15px 20px 0 rgba(122, 121, 121, 0.05);
+          box-shadow: 0 15px 20px 0 rgba(122, 121, 121, 0.05); }
   @media (min-width: 992px) {
     .form {
-      padding: 2.5em; } }
+      padding: 2.5em 2.5em 0.75em; } }
   @media (max-width: 991.98px) {
     .form {
-      padding: 1em; } }
+      padding: 1em 1em 0.3em; } }
   .form-title, .form-info {
     line-height: 1.2;
     text-align: center; }

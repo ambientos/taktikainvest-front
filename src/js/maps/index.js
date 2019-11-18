@@ -1,8 +1,8 @@
-let $contactsMap = $('.contacts-map')
+let $map = $('.map')
 
-if ( $contactsMap.length ) {
-	let _data = $contactsMap.data('map'),
-		_id   = $contactsMap.attr('id')
+if ( $map.length ) {
+	let _data = $map.data('map'),
+		_id   = $map.attr('id')
 
 	ymaps.ready(function() {
 		let map = new ymaps.Map(_id, {
