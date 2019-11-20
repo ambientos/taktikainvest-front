@@ -26,6 +26,7 @@
         "webpack-stream": "^5.2.1"
     },
     "dependencies": {
+        "@fancyapps/fancybox": "^3.5.7",
         "nouislider": "^14.0.3"
     }
 }
