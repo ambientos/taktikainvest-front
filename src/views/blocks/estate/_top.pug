@@ -1,0 +1,30 @@
+.estate-top
+	.row.justify-content-md-between
+		.col-lg-5.col-xl-4
+			.form-group
+				label.form-label Поиск:
+				.input-group
+					input.form-control.form-control-sm(
+						type='text'
+						placeholder='Номер объекта, метро или ключевое слово')
+					.input-group-append
+						button.btn-outline-secondary.btn-primary.btn-sm.btn(type='button')
+							span.btn-ico
+								include ./i/search.svg
+
+		.col-lg-5.col-xl-4
+			.row.align-items-end
+				.col
+					.form-group
+						label.form-label Сортировка:
+						select.custom-select-sm.custom-select
+							option Сначала дешевле
+							option Сначала дороже
+				.estate-top-btns.col
+					.form-group
+						button.btn.btn-gray.btn-sm.active(type='button')
+							span.btn-ico
+								include ./i/grid.svg
+						button.btn.btn-gray.btn-sm(type='button')
+							span.btn-ico
+								include ./i/mark.svg

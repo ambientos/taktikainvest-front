@@ -158,8 +158,29 @@ input[type="button"] {
   justify-content: center;
   align-items: center;
 
+  .btn-sm & {
+    height: 1.3125rem;
+  }
+
   .ico {
     display: inline-block;
     vertical-align: top;
+  }
+}
+
+
+//
+// Gray button
+//
+
+.btn-gray {
+  border-color: $input-border-color;
+
+  &.active,
+  &:hover {
+    $color: $secondary;
+
+    color: $color;
+    border-color: $color;
   }
 }

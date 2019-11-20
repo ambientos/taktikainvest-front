@@ -1,0 +1,83 @@
+extends ./layout/general.pug
+
+block meta
+	title Торговая недвижимость
+
+block content
+	main.main
+		.container
+			h1 Торговая недвижимость
+
+			include ./blocks/estate/_top.pug
+
+			.row
+				.estate-side.col-lg-3
+					.estate-side-widget
+						.h3 Фильтр
+						.estate-filter
+							.form-group
+								label.form-label Сортировка:
+								select.custom-select-sm.custom-select
+									option Торговые помещения
+							.form-group
+								label.form-label Тип сделки:
+								select.custom-select-sm.custom-select
+									option Аренда
+							.form-group
+								label.form-label Стоимость:
+								.form-row
+									.col
+										input.form-control-sm.form-control(
+											type='text'
+											placeholder='От')
+									.col
+										input.form-control-sm.form-control(
+											type='text'
+											placeholder='До')
+							.form-group
+								label.form-label Метро:
+								select.custom-select-sm.custom-select
+									option Баррикадная
+							.form-group
+								label.form-label Окупаемость:
+								select.custom-select-sm.custom-select
+									option до 5 лет
+							.form-group
+								label.form-label Площадь:
+								.form-slider-container
+									.form-slider(
+										data-min='0',
+										data-max='1000')
+							.form-group
+								label.custom-control.custom-checkbox
+									input.custom-control-input(
+										type='checkbox'
+										value='')
+									.custom-control-label Смотреть только с фото
+							.form-group
+								input.btn-primary.btn-block.btn(
+									type='submit'
+									value='Показать')
+
+					.estate-side-widget._light
+						.h3 Тип недвижимости
+						ul.estate-side-list.list-unstyled
+							- var categoryList = [{title: 'Арендный бизнес', num: '8'}, {title: 'Торговые помещения', num: '8'}, {title: 'Производственные', num: '8'}, {title: 'Свободного назначения', num: '8'}, {title: 'Склады', num: '15'}];
+							each categoryItem in categoryList
+								li.estate-side-list-item
+									a.d-flex.justify-content-between(href='/')
+										span= categoryItem.title
+										span.estate-side-list-item-v
+											| (
+											span= categoryItem.num
+											| )
+
+				.estate-content.col-lg-9
+					.estate-list.row
+						- var posts = [{id: '703', metro: 'Баррикадная', thumb: '2', title: 'Дом 980 кв. м', price: '355 000 000 ₽', chrs: ['Площадь: 980. 00 м<sup>2</sup>']}, {id: '23', sale: 'Срочная продажа!', metro: 'Ленинский проспект', thumb: '3', title: 'Дом на Рублевском шоссе', price: '250 000 ₽', chrs: ['Площадь: 850.00 м<sup>2</sup>']}, {id: '1034', metro: 'ВДНХ', thumb: '4', title: 'Продажа коттеджа р-н Ленинский', price: '80 000 000 ₽', chrs: ['Площадь: 330.00 м<sup>2</sup>']}, {id: '703', metro: 'Баррикадная', thumb: '2', title: 'Дом 980 кв. м', price: '355 000 000 ₽', chrs: ['Площадь: 980. 00 м<sup>2</sup>']}, {id: '23', sale: 'Срочная продажа!', metro: 'Ленинский проспект', thumb: '3', title: 'Дом на Рублевском шоссе', price: '250 000 ₽', chrs: ['Площадь: 850.00 м<sup>2</sup>']}, {id: '1034', metro: 'ВДНХ', thumb: '4', title: 'Продажа коттеджа р-н Ленинский', price: '80 000 000 ₽', chrs: ['Площадь: 330.00 м<sup>2</sup>']}, {id: '703', metro: 'Баррикадная', thumb: '2', title: 'Дом 980 кв. м', price: '355 000 000 ₽', chrs: ['Площадь: 980. 00 м<sup>2</sup>']}, {id: '23', sale: 'Срочная продажа!', metro: 'Ленинский проспект', thumb: '3', title: 'Дом на Рублевском шоссе', price: '250 000 ₽', chrs: ['Площадь: 850.00 м<sup>2</sup>']}, {id: '1034', metro: 'ВДНХ', thumb: '4', title: 'Продажа коттеджа р-н Ленинский', price: '80 000 000 ₽', chrs: ['Площадь: 330.00 м<sup>2</sup>']}];
+							each post in posts
+								.col-lg-4.col-sm-6
+									+postsItem(post)
+
+					+pagination
+

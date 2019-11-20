@@ -16,12 +16,35 @@
 			margin-bottom: 0;
 		}
 
+		&-id {
+			margin-bottom: .5em;
+			text-align: right;
+		}
+
 		&-thumbnail {
 			margin-bottom: 0;
 		}
 
 		&-link {
 			display: block;
+			position: relative;
+		}
+
+		&-sale {
+			position: absolute;
+			left: 0;
+			top: 1em;
+			padding: .05em .5em .2em;
+			color: $white;
+			background-color: $secondary;
+
+			@include media-breakpoint-up('lg') {
+				font-size: .875rem;
+			}
+
+			@include media-breakpoint-down('md') {
+				font-size: .75rem;
+			}
 		}
 
 		&-main {
@@ -83,6 +106,29 @@
 
 				@include media-breakpoint-down('sm') {
 					font-size: .875rem;
+				}
+
+				&._metro {
+					position: relative;
+					padding-left: $grid-gutter-width;
+
+					&::before {
+						$size: 17px;
+
+						display: block;
+						position: absolute;
+						left: 0;
+						top: .3em;
+						width: $size;
+						height: $size;
+						vertical-align: top;
+						content: '';
+						background: {
+							repeat: no-repeat;
+							image: url('#{$img-dir}metro.png');
+							size: $size auto;
+						}
+					}
 				}
 			}
 		}

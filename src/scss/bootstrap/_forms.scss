@@ -136,6 +136,10 @@ textarea.form-control {
   margin-top: $form-text-margin-top;
 }
 
+.form-label {
+  font-size: .875rem;
+}
+
 
 // Form grid
 //
@@ -191,6 +195,19 @@ textarea.form-control {
     margin-top: 0;
     margin-right: $form-check-inline-input-margin-x;
     margin-left: 0;
+  }
+}
+
+
+//
+// Form Slider extra styles
+//
+
+.form-slider {
+  &-label {
+    display: block;
+    margin: 1em 0 1.5em;
+    color: $gray-900;
   }
 }
 

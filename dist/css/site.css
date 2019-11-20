@@ -278,11 +278,30 @@
 .owl-item > .posts-item {
   margin-bottom: 0; }
 
+.posts-item-id {
+  margin-bottom: .5em;
+  text-align: right; }
+
 .posts-item-thumbnail {
   margin-bottom: 0; }
 
 .posts-item-link {
-  display: block; }
+  display: block;
+  position: relative; }
+
+.posts-item-sale {
+  position: absolute;
+  left: 0;
+  top: 1em;
+  padding: .05em .5em .2em;
+  color: #fff;
+  background-color: #4d6de6; }
+  @media (min-width: 992px) {
+    .posts-item-sale {
+      font-size: .875rem; } }
+  @media (max-width: 991.98px) {
+    .posts-item-sale {
+      font-size: .75rem; } }
 
 .posts-item-main {
   padding-bottom: 1.25em;
@@ -331,6 +350,21 @@
     @media (max-width: 767.98px) {
       .posts-item-chrs-item {
         font-size: .875rem; } }
+    .posts-item-chrs-item._metro {
+      position: relative;
+      padding-left: 30px; }
+      .posts-item-chrs-item._metro::before {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: .3em;
+        width: 17px;
+        height: 17px;
+        vertical-align: top;
+        content: '';
+        background-repeat: no-repeat;
+        background-image: url("../i/metro.png");
+        background-size: 17px auto; }
 
 @media (min-width: 992px) {
   .estate-side-1 {
@@ -475,6 +509,34 @@
     max-width: 445px; }
   .estate-chr-title {
     color: #1e1e1e; }
+
+.estate-top {
+  margin-bottom: 1.875rem;
+  padding: .875em 1.25em 0;
+  background-color: #fff; }
+  .estate-top-btns {
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+    white-space: nowrap; }
+
+.estate-side-widget {
+  margin: 2.5em 0 4.5em; }
+  .estate-side-widget._light {
+    padding: 1.375em;
+    background-color: #fff; }
+
+.estate-side-list-item {
+  margin: 1.2em 0;
+  line-height: 1.2; }
+  .estate-side-list-item-v {
+    font-size: 0.875rem;
+    color: #4d6de6; }
+  .estate-side-list-item a {
+    color: #1e1e1e;
+    text-decoration: none; }
+    .estate-side-list-item a:hover {
+      color: #4d6de6; }
 
 .adv-inner {
   color: #fff; }

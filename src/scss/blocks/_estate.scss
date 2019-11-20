@@ -197,4 +197,48 @@
 			color: $gray-900;
 		}
 	}
+
+	&-top {
+		margin-bottom: 1.875rem;
+		padding: .875em 1.25em 0;
+		background-color: $white;
+
+		&-btns {
+			flex-grow: 0;
+			white-space: nowrap;
+		}
+	}
+
+	&-side {
+		&-widget {
+			margin: 2.5em 0 4.5em;
+
+			&._light {
+				padding: 1.375em;
+				background-color: $white;
+			}
+		}
+
+		&-list {
+			&-item {
+				margin: 1.2em 0;
+				line-height: 1.2;
+
+				&-v {
+					@include font-size(.875rem);
+
+					color: $secondary;
+				}
+
+				a {
+					color: $gray-900;
+					text-decoration: none;
+
+					&:hover {
+						color: $secondary;
+					}
+				}
+			}
+		}
+	}
 }

@@ -1570,8 +1570,8 @@ select.form-control:focus::-ms-value {
   width: 100%; }
 
 .form-control-sm {
-  height: calc(1.5em + 0.5rem + 2px);
-  padding: 0.25rem 0.5rem;
+  height: calc(1.5em + 1.312rem + 2px);
+  padding: 0.656rem 0.5rem;
   font-size: 0.875rem;
   line-height: 1.5; }
 
@@ -1596,6 +1596,9 @@ textarea.form-control {
 .form-text {
   display: block;
   margin-top: 0.25rem; }
+
+.form-label {
+  font-size: .875rem; }
 
 .form-row {
   display: -webkit-box;
@@ -1639,6 +1642,11 @@ textarea.form-control {
     margin-top: 0;
     margin-right: 0.3125rem;
     margin-left: 0; }
+
+.form-slider-label {
+  display: block;
+  margin: 1em 0 1.5em;
+  color: #1e1e1e; }
 
 .valid-feedback {
   display: none;
@@ -2056,7 +2064,7 @@ fieldset:disabled a.btn {
   border-radius: 0; }
 
 .btn-sm {
-  padding: 0.25rem 0.5rem;
+  padding: 0.656rem 0.5rem;
   font-size: 0.875rem;
   line-height: 1.5;
   border-radius: 0; }
@@ -2083,9 +2091,17 @@ input[type="button"].btn-block {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
+  .btn-sm .btn-ico {
+    height: 1.3125rem; }
   .btn-ico .ico {
     display: inline-block;
     vertical-align: top; }
+
+.btn-gray {
+  border-color: #ced4da; }
+  .btn-gray.active, .btn-gray:hover {
+    color: #4d6de6;
+    border-color: #4d6de6; }
 
 .fade {
   -webkit-transition: opacity 0.15s linear;
@@ -2224,7 +2240,7 @@ input[type="button"].btn-block {
 
 .input-group-sm > .form-control:not(textarea),
 .input-group-sm > .custom-select {
-  height: calc(1.5em + 0.5rem + 2px); }
+  height: calc(1.5em + 1.312rem + 2px); }
 
 .input-group-sm > .form-control,
 .input-group-sm > .custom-select,
@@ -2232,7 +2248,7 @@ input[type="button"].btn-block {
 .input-group-sm > .input-group-append > .input-group-text,
 .input-group-sm > .input-group-prepend > .btn,
 .input-group-sm > .input-group-append > .btn {
-  padding: 0.25rem 0.5rem;
+  padding: 0.656rem 0.5rem;
   font-size: 0.875rem;
   line-height: 1.5; }
 
@@ -2389,9 +2405,9 @@ input[type="button"].btn-block {
     display: none; }
 
 .custom-select-sm {
-  height: calc(1.5em + 0.5rem + 2px);
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
+  height: calc(1.5em + 1.312rem + 2px);
+  padding-top: 0.656rem;
+  padding-bottom: 0.656rem;
   padding-left: 0.5rem;
   font-size: 0.875rem; }
 
@@ -3074,59 +3090,43 @@ input[type="button"].btn-block {
 .breadcrumb-item.active {
   color: #7a7979; }
 
-.pagination {
+.pagination .nav-links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding-left: 0;
   list-style: none; }
 
-.page-link {
+.page-numbers {
   position: relative;
   display: block;
-  padding: 0.5rem 0.75rem;
-  margin-left: -1px;
+  padding: 0.9rem 1.2rem;
+  margin: 0 .7em 1em;
+  font-size: 0.812rem;
   line-height: 1.25;
-  color: #47049c;
-  background-color: #fff;
-  border: 1px solid #dee2e6; }
-  .page-link:hover {
-    z-index: 2;
-    color: #6906e7;
-    text-decoration: none;
+  text-decoration: none;
+  color: #fff;
+  background-color: #47049c;
+  border: 1px solid #47049c; }
+  .page-numbers.current, .page-numbers.current:hover, .page-numbers.dots, .page-numbers.dots:hover {
+    color: #47049c;
     background-color: #e5e5e5;
-    border-color: #dee2e6; }
-  .page-link:focus {
+    border-color: #e5e5e5; }
+  .page-numbers:hover {
+    z-index: 2;
+    color: #fff;
+    background-color: #6906e7;
+    border-color: #6906e7; }
+  .page-numbers:focus {
     z-index: 2;
     outline: 0;
     -webkit-box-shadow: 0 0 0 0.2rem rgba(71, 4, 156, 0.25);
             box-shadow: 0 0 0 0.2rem rgba(71, 4, 156, 0.25); }
-
-.page-item:first-child .page-link {
-  margin-left: 0; }
-
-.page-item.active .page-link {
-  z-index: 1;
-  color: #fff;
-  background-color: #47049c;
-  border-color: #47049c; }
-
-.page-item.disabled .page-link {
-  color: #7a7979;
-  pointer-events: none;
-  cursor: auto;
-  background-color: #fff;
-  border-color: #dee2e6; }
-
-.pagination-lg .page-link {
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  line-height: 1.5; }
-
-.pagination-sm .page-link {
-  padding: 0.25rem 0.5rem;
-  font-size: 0.875rem;
-  line-height: 1.5; }
 
 .d-none {
   display: none !important; }

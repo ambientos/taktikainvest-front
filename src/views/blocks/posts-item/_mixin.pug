@@ -1,10 +1,18 @@
 mixin postsItem(object)
 	article.posts-item
+		if object.id
+			.posts-item-id
+				| ID:&nbsp;
+				span= object.id
+
 		figure.posts-item-thumbnail
 			a.posts-item-link(href='/')
 				img.img-block.img-fluid(
 					src='t/' + object.thumb + '.jpg'
 					alt='')
+				if object.sale
+					.posts-item-sale= object.sale
+
 		.posts-item-main
 			a.posts-item-title(href='/')= object.title
 			.posts-item-price
@@ -17,3 +25,6 @@ mixin postsItem(object)
 			ul.posts-item-chrs.list-unstyled
 				each chr in object.chrs
 					li.posts-item-chrs-item!= chr
+
+				if object.metro
+					li.posts-item-chrs-item._metro= object.metro
