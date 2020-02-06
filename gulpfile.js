@@ -20,10 +20,10 @@ const   gulp = require('gulp'),
         },
 
         files = {
-            pug: [path.src, path.pug, '**', '*.pug'].join('/'),
-            css: [path.dist, path.css, '**', '*.css'].join('/'),
-            scss: [path.src, path.scss, '**', '*.scss'].join('/'),
-            js: [path.src, path.js, '**', '*.js'].join('/')
+            pug: `${path.src}/${path.pug}/**/*.pug`,
+            css: `${path.dist}/${path.css}/**/*.css`,
+            scss: `${path.src}/${path.scss}/**/*.scss`,
+            js: `${path.src}/${path.js}/**/*.js`
         }
 
 let webpackOptions = require('./webpack.config')
@@ -34,8 +34,7 @@ function browserSync(done) {
     browsersync.init({
         server: {
             baseDir: path.dist
-        },
-        port: 3000
+        }
     })
 
     done()
@@ -45,7 +44,7 @@ function browserSync(done) {
 // HTML task
 function htmlGenerate() {
     return gulp
-        .src([path.src, path.pug, '*.pug'].join('/'))
+        .src(`${path.src}/${path.pug}/*.pug`)
         .pipe(plumber({
             errorHandler: notify.onError( err => ({
                 title: 'Pug Builder',
@@ -55,7 +54,7 @@ function htmlGenerate() {
         .pipe(pug({
             pretty: '\t'
         }))
-        .pipe(gulp.dest([path.dist, path.html].join('/')))
+        .pipe(gulp.dest(`${path.dist}`))
         .pipe(browsersync.stream())
 }
 
@@ -74,7 +73,7 @@ function cssGenerate() {
         .pipe(sass({ outputStyle: 'nested' }).on('error', sass.logError))
         .pipe(autoprefixer('last 2 versions'))
         .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest( [path.dist, path.css].join('/') ))
+        .pipe(gulp.dest(`${path.dist}/${path.css}`))
         .pipe(browsersync.stream())
 }
 
@@ -92,7 +91,7 @@ function jsGenerate() {
             }))
         }))
         .pipe(webpackStream(webpackOptions))
-        .pipe(gulp.dest([path.dist, path.js].join('/')))
+        .pipe(gulp.dest(`${path.dist}/${path.js}`))
         .pipe(browsersync.stream())
 }
 
